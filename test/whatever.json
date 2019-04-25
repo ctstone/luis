@@ -1,0 +1,1245 @@
+{
+  "luis_schema_version": "3.2.0",
+  "versionId": "0.1",
+  "name": "Music",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "Music.DecreaseVolume",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "DecreaseVolume"
+      }
+    },
+    {
+      "name": "Music.IncreaseVolume",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "IncreaseVolume"
+      }
+    },
+    {
+      "name": "Music.Mute",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "Mute"
+      }
+    },
+    {
+      "name": "Music.NowPlaying"
+    },
+    {
+      "name": "Music.Pause",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "Pause"
+      }
+    },
+    {
+      "name": "Music.PlayMusic",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "PlayMusic"
+      }
+    },
+    {
+      "name": "Music.PlayMusic2"
+    },
+    {
+      "name": "Music.Repeat",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "Repeat"
+      }
+    },
+    {
+      "name": "Music.Resume",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "Resume"
+      }
+    },
+    {
+      "name": "Music.SetVolume"
+    },
+    {
+      "name": "Music.ShowVolume"
+    },
+    {
+      "name": "Music.SkipBack",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "SkipBack"
+      }
+    },
+    {
+      "name": "Music.SkipForward",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "SkipForward"
+      }
+    },
+    {
+      "name": "Music.Stop",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "Stop"
+      }
+    },
+    {
+      "name": "Music.Unmute",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "Unmute"
+      }
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Temp"
+    }
+  ],
+  "entities": [
+    {
+      "name": "Music.AlbumName",
+      "roles": []
+    },
+    {
+      "name": "Music.ArtistName",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "ArtistName"
+      },
+      "roles": []
+    },
+    {
+      "name": "Music.GeneralName",
+      "roles": []
+    },
+    {
+      "name": "Music.Genre",
+      "inherits": {
+        "domain_name": "Music",
+        "model_name": "Genre"
+      },
+      "roles": []
+    },
+    {
+      "name": "Music.SongName",
+      "roles": []
+    },
+    {
+      "name": "Music.Volume",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [
+    {
+      "name": "Music.Pattern.Album",
+      "roles": [],
+      "explicitList": []
+    },
+    {
+      "name": "Music.Pattern.Artist",
+      "roles": [],
+      "explicitList": []
+    },
+    {
+      "name": "Music.Pattern.General",
+      "roles": [],
+      "explicitList": []
+    },
+    {
+      "name": "Music.Pattern.Genre",
+      "roles": [],
+      "explicitList": []
+    },
+    {
+      "name": "Music.Pattern.Song",
+      "roles": [],
+      "explicitList": []
+    }
+  ],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [
+    {
+      "pattern": "play album {Music.Pattern.Album}",
+      "intent": "Music.PlayMusic2"
+    },
+    {
+      "pattern": "play artist {Music.Pattern.Artist}",
+      "intent": "Music.PlayMusic2"
+    },
+    {
+      "pattern": "play {Music.Pattern.General}",
+      "intent": "Music.PlayMusic2"
+    },
+    {
+      "pattern": "play genre {Music.Pattern.Genre}",
+      "intent": "Music.PlayMusic2"
+    },
+    {
+      "pattern": "play song {Music.Pattern.Song}",
+      "intent": "Music.PlayMusic2"
+    }
+  ],
+  "utterances": [
+    {
+      "text": "\" stop because i ' m happy \" \" please \" \" \"",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "add volume please",
+      "intent": "Music.IncreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "boost headphones volume",
+      "intent": "Music.IncreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "can you lower my volume",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "can you mute the computer",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "can you pause movies please",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "can you unmute the volume for me please",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "cancel this song",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "change theme song",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "continue playing track",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "continue watching",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "current volume",
+      "intent": "Music.ShowVolume",
+      "entities": []
+    },
+    {
+      "text": "decrease the volume please",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "do pause please",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "do pausing please",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "do resuming for the current playing music",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "doesn ' t matter to me",
+      "intent": "Music.PlayMusic",
+      "entities": []
+    },
+    {
+      "text": "fast forward to two minutes",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "find hindi music",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 5,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "go mute go",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "go to the previous artist",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "hakuna matata hakuna resume you bastard",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "halt music please",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "how loud is this",
+      "intent": "Music.ShowVolume",
+      "entities": []
+    },
+    {
+      "text": "i need to unmute the volume now",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "i want that song to be repeated",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "i want to unmute the music",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "increase the ringer volume on my phone to thirty",
+      "intent": "Music.IncreaseVolume",
+      "entities": [
+        {
+          "entity": "Music.Volume",
+          "startPos": 42,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "increase the volume to max",
+      "intent": "Music.IncreaseVolume",
+      "entities": [
+        {
+          "entity": "Music.Volume",
+          "startPos": 23,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "jump to previous song",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "launch minecraft",
+      "intent": "Music.PlayMusic",
+      "entities": []
+    },
+    {
+      "text": "let me unmute the sound please",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "louder if you please",
+      "intent": "Music.IncreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "lower the volume by one",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "make the volume mute",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "make this louder",
+      "intent": "Music.IncreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "move back one track",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "music command skip forward",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "mute my microphone",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "mute spotify",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "mute the video please",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "mute the volume",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "mute the volume please",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "next song please",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "pause current playlist",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "pause media now please",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "pause music for me please",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "pause please",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "pause the playing song please",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "play abbey road",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.GeneralName",
+          "startPos": 5,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "play abbey road by the beatles",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.GeneralName",
+          "startPos": 5,
+          "endPos": 14
+        },
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 19,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "play album abbey road",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.AlbumName",
+          "startPos": 11,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "play album blood on the tracks",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.AlbumName",
+          "startPos": 11,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "play album my generation",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.AlbumName",
+          "startPos": 11,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "play album yellow submarine",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.AlbumName",
+          "startPos": 11,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "play augustana playlist",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "play beatles please",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "play blood on the tracks",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.GeneralName",
+          "startPos": 5,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "play chief keef citgo please",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "play country playlist",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 5,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "play elysium please",
+      "intent": "Music.PlayMusic",
+      "entities": []
+    },
+    {
+      "text": "play genre jazz",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 11,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "play hey jude",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.GeneralName",
+          "startPos": 5,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "play i want to hold your hand",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.GeneralName",
+          "startPos": 5,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "play james horner",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "play juicy j",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 11
+        }
+      ]
+    },
+    {
+      "text": "play me a blues song",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 10,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "play me something gangsta",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "play my generation",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.GeneralName",
+          "startPos": 5,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "play saw soundtrack",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 9,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "play soft rock",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 5,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "play some house music",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 10,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "play song hey jude",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.SongName",
+          "startPos": 10,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "play song i want to hold your hand",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.SongName",
+          "startPos": 10,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "play songs from the white album",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.AlbumName",
+          "startPos": 16,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "play tedashii instrumentals",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 12
+        },
+        {
+          "entity": "Music.Genre",
+          "startPos": 14,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "play the next album",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "play the next selection",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "play the next song",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "play the previous one",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "play the previous track",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "play the white album",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.GeneralName",
+          "startPos": 5,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "play track again",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "play train please",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "play trapavelli tre by two chainz",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 23,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "play vienna teng now please",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "play yellow submarine",
+      "intent": "Music.PlayMusic2",
+      "entities": [
+        {
+          "entity": "Music.GeneralName",
+          "startPos": 5,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "please mute all sounds",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "please pause barracuda",
+      "intent": "Music.PlayMusic",
+      "entities": []
+    },
+    {
+      "text": "please pause cody",
+      "intent": "Music.Pause",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 13,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "please play bleed",
+      "intent": "Music.PlayMusic",
+      "entities": []
+    },
+    {
+      "text": "please replay",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "please replay it for me",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "please resume music",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "please sound mute",
+      "intent": "Music.Mute",
+      "entities": []
+    },
+    {
+      "text": "please stop the player",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "please unmute the music",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "please volume minus",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "please volume up 10",
+      "intent": "Music.IncreaseVolume",
+      "entities": [
+        {
+          "entity": "Music.Volume",
+          "startPos": 17,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "previous song play please",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "put this song on repeat",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "reduce volume please",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "repeat choice play",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "repeat current playlist",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "repeat genres please",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "replay back please",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "replay one before the current playing song",
+      "intent": "Music.Repeat",
+      "entities": []
+    },
+    {
+      "text": "resume episode please",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "resume playback for me please",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "resume the music",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "resume the song i was listening to",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "set volume 20 percent",
+      "intent": "Music.SetVolume",
+      "entities": [
+        {
+          "entity": "Music.Volume",
+          "startPos": 11,
+          "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "set volume 30",
+      "intent": "Music.SetVolume",
+      "entities": [
+        {
+          "entity": "Music.Volume",
+          "startPos": 11,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "set volume to 10",
+      "intent": "Music.SetVolume",
+      "entities": [
+        {
+          "entity": "Music.Volume",
+          "startPos": 14,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "set volume to 50 percent",
+      "intent": "Music.SetVolume",
+      "entities": [
+        {
+          "entity": "Music.Volume",
+          "startPos": 14,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "skip back a song",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "skip pet shop boys please",
+      "intent": "Music.SkipForward",
+      "entities": [
+        {
+          "entity": "Music.ArtistName",
+          "startPos": 5,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "skip this one",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "skip this song please",
+      "intent": "Music.SkipForward",
+      "entities": []
+    },
+    {
+      "text": "spotify pause please",
+      "intent": "Music.Pause",
+      "entities": []
+    },
+    {
+      "text": "start the playlist of name 141819",
+      "intent": "Music.PlayMusic",
+      "entities": []
+    },
+    {
+      "text": "stop pandora now please",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "stop playing with life",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "stop the music",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "stop the playing music",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "stop the track",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "the previous track please",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "the previous video please",
+      "intent": "Music.SkipBack",
+      "entities": []
+    },
+    {
+      "text": "turn down the volume",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "turn off song",
+      "intent": "Music.Stop",
+      "entities": []
+    },
+    {
+      "text": "turn sound down",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "turn volume up",
+      "intent": "Music.IncreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "unmute the music please",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "unmute the sound",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "unmute the volume",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "unmute volume",
+      "intent": "Music.Unmute",
+      "entities": []
+    },
+    {
+      "text": "unpause the paused music",
+      "intent": "Music.Resume",
+      "entities": []
+    },
+    {
+      "text": "volume 70",
+      "intent": "Music.SetVolume",
+      "entities": [
+        {
+          "entity": "Music.Volume",
+          "startPos": 7,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "volume down 20 please",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "volume down please",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "volume low please",
+      "intent": "Music.DecreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "what is the album",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "what is the current volume",
+      "intent": "Music.ShowVolume",
+      "entities": []
+    },
+    {
+      "text": "what is the name of this artist",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "what is the name of this song",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "what is the volume",
+      "intent": "Music.ShowVolume",
+      "entities": []
+    },
+    {
+      "text": "what singer is this",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "what song is this",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "what volume is this",
+      "intent": "Music.ShowVolume",
+      "entities": []
+    },
+    {
+      "text": "which album is this",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "who is singing this song",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "who is the singer",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "who is this artist",
+      "intent": "Music.NowPlaying",
+      "entities": []
+    },
+    {
+      "text": "woah woah woah play eighties please",
+      "intent": "Music.PlayMusic",
+      "entities": [
+        {
+          "entity": "Music.Genre",
+          "startPos": 20,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "would you please make youtube music louder",
+      "intent": "Music.IncreaseVolume",
+      "entities": []
+    },
+    {
+      "text": "you need to be louder",
+      "intent": "Music.IncreaseVolume",
+      "entities": []
+    }
+  ],
+  "settings": []
+}
